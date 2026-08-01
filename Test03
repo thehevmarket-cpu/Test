@@ -5,3 +5,6 @@ git user.email "youjiandizhi"
 2.把文件夹变成git版本管理的储存库
 git init    会在当前目录建立一个.git隐藏文件夹,保存变更记录
 3.git status 检测状态
+4. git add   未追踪变为追踪   git add .所有变更都追踪
+5. git commit -m "注释信息"  
+6. 
