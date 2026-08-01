@@ -9,8 +9,10 @@ git init    会在当前目录建立一个.git隐藏文件夹,保存变更记录
 5. git add   未追踪变为追踪   git add .所有变更都追踪  文件加入到暂存区
 6. git commit -m "注释信息"   建立快照
 7. git diff 还原点id   比较
-8. git checkout 还原点id --文件名  可逆  ||   git rest --hard 还原点id 会删掉后面还原点 不可逆
+8. git checkout 还原点id --文件名 保留记录  可逆  ||   git rest --hard 还原点id 会删掉后面还原点 不可逆
 9. 删除的文件 也需要用git add， Git追踪的是文件的变化而非文件本身
 10.如果一些文件要追踪，建一个.gitignore文件 里面列上不追踪的文件
 ///////////////////////////////////////////////////////////
-
+11.git remote add orgin http://xxxxxxxxxxxxxxx.git //orgin远端储存库名字  后面是 远端储存库地址
+12.git branch -m main  // branch 分支管理  -m重命名  main新的分支名字 
+13.git push -u orgin main // push推送   -u建立关联  orgin 远端名字  main本地名字
