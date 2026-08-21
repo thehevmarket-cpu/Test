@@ -1,0 +1,18 @@
+name: Label New Issues
+on: issues:
+  types: [opened]
+  jobs:
+    label-issues:
+      runs-on: ubuntu-latest
+      permissions:
+        issues: write
+        contents: read
+    steps:
+     - name: Checkout repository
+       uses: actions/checkout@v6
+     - name: Add triage label
+       env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          Issue_Number: ${{ github.event.issue.number }}
+          LABEL: 'triage'
+        run: gh issue edit $Issue_Number --add-label $LABEL
